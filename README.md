@@ -1,11 +1,18 @@
 # Machine Learning Exercises
 
+This repository contains machine learning regression exercises using the Boston Housing dataset.
+
+## Exeercise 2: Ridge Regression
+
+This exercise explores Ridge Regression and L2 regularisation using the bOSTON gHousing dataset. It tests alpha values of 0.01, 0.1, 1, 10, 100, compares train/test errors, and examines how the cofficients change.
+
 ## Exercise 3: Lasso Regression
 
 This exercise uses the Boston Housing dataset to explore how Lasso changes feature weights as alpha increases. The notebook compares five alpha values, reports prediction errors, and plots how many features remain in use.
 
 ### Files
 
+- [Exercise 2 notebook](Exercise_2_Ridge_Regression.ipynb) — code, results, and conclusions.
 - [Exercise 3 notebook](Exercise_3_Lasso_Regression.ipynb) — code, results, and conclusions.
 - [BostonHousing.csv](BostonHousing.csv) — the dataset used by the notebook.
 - [requirements.txt](requirements.txt) — Python packages needed to run it.
@@ -20,9 +27,15 @@ To install the packages in your active environment:
 python -m pip install -r requirements.txt
 ```
 
-
-
 ### Results
+
+### Exeercise 2: Ridge Regression
+
+As alpha increases, the Ridge Regression exercise applies stronger regularization and the coefficients generally shrink towards zero. The features rremain in the model beacuse L2 regularisation does not normalluy force coefficients to become exactly zero.
+
+Higher alpha values apply stronger regularisation, which can eventually increase prediction error if the model becomes too constrained.
+
+### Exeercise 3: Lasso Regression
 
 At alpha 0.01 and 0.1, all eight features remain active. At alpha 1, Lasso drops NOX, DIS, and AGE. At alpha 10 and 100, all feature weights become zero, so every prediction equals the training target mean.
 
