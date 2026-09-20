@@ -14,11 +14,16 @@ This exercise explores Ridge Regression and L2 regularisation using the bOSTON g
 
 This exercise uses the Boston Housing dataset to explore how Lasso changes feature weights as alpha increases. The notebook compares five alpha values, reports prediction errors, and plots how many features remain in use.
 
+## Exercise 4: Elastic Net Regression
+
+This exercise uses the Boston Housing dataset to explore Elastic Net, combining L1 and L2 regularisation. It tests different alpha and `l1_ratio` values, compares Elastic Net with Ridge and Lasso, and visualises coefficient changes.
+
 ### Files
 
 - [Exercise 1 script](Exercise_1_Overfitting_in_action.py) — Linear Regression training, predictions, and evaluation.
 - [Exercise 2 notebook](Exercise_2_Ridge_Regression.ipynb) — code, results, and conclusions.
 - [Exercise 3 notebook](Exercise_3_Lasso_Regression.ipynb) — code, results, and conclusions.
+- [Exercise 4 notebook](Exercise_4_Elastic_Net.ipynb) — Elastic Net tuning, model comparison, and coefficient analysis.
 - [BostonHousing.csv](BostonHousing.csv) — the dataset used by the exercises.
 - [requirements.txt](requirements.txt) — Python packages needed to run the exercises.
 
@@ -57,3 +62,7 @@ Higher alpha values apply stronger regularisation, which can eventually increase
 At alpha 0.01 and 0.1, all eight features remain active. At alpha 1, Lasso drops NOX, DIS, and AGE. At alpha 10 and 100, all feature weights become zero, so every prediction equals the training target mean.
 
 Alpha 0.01 gives the lowest test error among the values tested on this split. Increasing alpha reduces the number of features, but it also worsens prediction performance in this experiment.
+
+#### Exercise 4: Elastic Net Regression
+
+Elastic Net combines L1 and L2 regularisation. Increasing **l1_ratio** makes the model behave more like Lasso, while lower values increase the influence of L2 regularisation. The exercise compares Elastic Net against Ridge and Lasso and shows how feature coefficients change at different **l1_ratio** settings.
