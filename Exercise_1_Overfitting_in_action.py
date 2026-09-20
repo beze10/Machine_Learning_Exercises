@@ -1,4 +1,6 @@
 #26134667_Brian_Ezeanya
+#25243888_Joseph_Shunom
+#26128756_Gloria_Ezeanya
 
 # %%
 import pandas as pd
