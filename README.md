@@ -1,4 +1,4 @@
-# Machine Learning Exercises
+# Machine Learning Exercises Lab 1
 
 This repository contains machine learning regression exercises using the Boston Housing dataset.
 
